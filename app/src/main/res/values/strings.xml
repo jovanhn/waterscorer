@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WaterScorer</string>
+    <string name="team_name">Enter Team Name</string>
+    <string name="team_a">TeamA</string>
+    <string name="team_b">TeamB</string>
+    <string name="button_start">Start Match</string>
+    <string name="score">0</string>
+</resources>
