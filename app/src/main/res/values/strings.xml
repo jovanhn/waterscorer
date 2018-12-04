@@ -5,4 +5,9 @@
     <string name="team_b">TeamB</string>
     <string name="button_start">Start Match</string>
     <string name="score">0</string>
+    <string name="goal_score">Goal</string>
+    <string name="goal_unscore">-</string>
+    <string name="fouls">Fouls</string>
+    <string name="make_foul">Foul</string>
+    <string name="unmake_foul">-</string>
 </resources>
