@@ -7,7 +7,9 @@
     <string name="score">0</string>
     <string name="goal_score">Goal</string>
     <string name="goal_unscore">-</string>
-    <string name="fouls">Fouls</string>
+    <string name="fouls">Fouls:</string>
     <string name="make_foul">Foul</string>
     <string name="unmake_foul">-</string>
+    <string name="end_match">End Match</string>
+    <string name="restart_match">Restart</string>
 </resources>
