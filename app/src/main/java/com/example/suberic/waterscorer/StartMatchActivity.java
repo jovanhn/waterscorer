@@ -55,44 +55,53 @@ public class StartMatchActivity extends AppCompatActivity {
     }
     public void plusFoulsTeamA(View view) {
         foulsTeamA++;
+        mMatchResult.teamFoul(1);
         TextView textView = findViewById(R.id.team_a_fouls);
         textView.setText(foulsTeamA+"");
 
     }
     public void plusFoulsTeamB(View view) {
         foulsTeamB++;
+        mMatchResult.teamFoul(2);
         TextView textView = findViewById(R.id.team_b_fouls);
         textView.setText(foulsTeamB+"");
 
     }
 
     public void minusScoreTeamA(View view) {
-        if(scoreTeamA > 0)
+        if(scoreTeamA > 0) {
             scoreTeamA--;
+            mMatchResult.removeGoalTeam(1);
+        }
         TextView textView = findViewById(R.id.team_a_score);
         textView.setText(scoreTeamA+"");
 
     }
     public void minusScoreTeamB(View view) {
-        if(scoreTeamB > 0)
+        if(scoreTeamB > 0) {
             scoreTeamB--;
+            mMatchResult.removeGoalTeam(2);
+        }
         TextView textView = findViewById(R.id.team_b_score);
         textView.setText(scoreTeamB+"");
 
     }
     public void minusFoulsTeamA(View view) {
-        if(foulsTeamA > 0)
+        if(foulsTeamA > 0) {
             foulsTeamA--;
+            mMatchResult.removeFoulTeam(1);
+        }
         TextView textView = findViewById(R.id.team_a_fouls);
         textView.setText(foulsTeamA+"");
 
     }
     public void minusFoulsTeamB(View view) {
-        if(foulsTeamB > 0)
+        if(foulsTeamB > 0) {
             foulsTeamB--;
+            mMatchResult.removeFoulTeam(2);
+        }
         TextView textView = findViewById(R.id.team_b_fouls);
         textView.setText(foulsTeamB+"");
-
     }
 
     public void endMatch(View view) {
@@ -102,7 +111,13 @@ public class StartMatchActivity extends AppCompatActivity {
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
-        mMatchResult.removeGoalTeam(1);
 
+        Intent intent = new Intent(this, ShowScoreActivity.class);
+        Bundle extras = new Bundle();
+
+        extras.putSerializable("MATCH_RESULT", mMatchResult);
+
+        intent.putExtras(extras);
+        startActivity(intent);
     }
 }

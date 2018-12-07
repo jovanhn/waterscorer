@@ -7,39 +7,48 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/team_name"/>
-    <EditText
-        android:id="@+id/team_a"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/team_a"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/team_name"/>
-    <EditText
-        android:id="@+id/team_b"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/team_b"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/team_name"/>
+        <EditText
+            android:id="@+id/team_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/team_a"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_start"
-        android:onClick="onStartMatch"
-        android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/team_name"/>
+        <EditText
+            android:id="@+id/team_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/team_b"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_start"
+            android:onClick="onStartMatch"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
 
 
 </LinearLayout>

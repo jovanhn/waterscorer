@@ -12,4 +12,5 @@
     <string name="unmake_foul">-</string>
     <string name="end_match">End Match</string>
     <string name="restart_match">Restart</string>
+    <string name="new_match">New Match</string>
 </resources>
